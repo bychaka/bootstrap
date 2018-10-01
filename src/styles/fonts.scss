@@ -1,24 +1,72 @@
 @font-face {
-    font-family: 'Open Sans';
-    src: url('/fonts/OpenSans.woff2') format('woff2'),
-        url('/fonts/OpenSans.woff') format('woff');
-    font-weight: normal;
+    font-family: 'Raleway';
+    src: url('/fonts/Raleway-SemiBold.woff2') format('woff2'),
+        url('/fonts/Raleway-SemiBold.woff') format('woff');
+    font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Open Sans';
-    src: url('/fonts/OpenSans-Bold.woff2') format('woff2'),
-        url('/fonts/OpenSans-Bold.woff') format('woff');
+    font-family: 'Raleway';
+    src: url('/fonts/Raleway-Bold.woff2') format('woff2'),
+        url('/fonts/Raleway-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Open Sans';
-    src: url('/fonts/OpenSans-Semibold.woff2') format('woff2'),
-        url('/fonts/OpenSans-Semibold.woff') format('woff');
-    font-weight: 600;
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-ExtraLight.woff2') format('woff2'),
+        url('/fonts/Montserrat-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('/fonts/Raleway-Regular.woff2') format('woff2'),
+        url('/fonts/Raleway-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto-Regular.woff2') format('woff2'),
+        url('/fonts/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('/fonts/Raleway-ExtraBold.woff2') format('woff2'),
+        url('/fonts/Raleway-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-Light.woff2') format('woff2'),
+        url('/fonts/Montserrat-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-Regular.woff2') format('woff2'),
+        url('/fonts/Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('/fonts/Raleway-Medium.woff2') format('woff2'),
+        url('/fonts/Raleway-Medium.woff') format('woff');
+    font-weight: 500;
     font-style: normal;
 }
 
