@@ -70,3 +70,130 @@
     font-style: normal;
 }
 
+//import custom site font
+
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?q27a87');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?q27a87#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?q27a87') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?q27a87') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?q27a87##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow {
+  &:before {
+    content: $icon-arrow; 
+  }
+}
+.icon-blog {
+  &:before {
+    content: $icon-blog; 
+  }
+}
+.icon-cart {
+  &:before {
+    content: $icon-cart; 
+  }
+}
+.icon-client {
+  &:before {
+    content: $icon-client; 
+  }
+}
+.icon-coffe {
+  &:before {
+    content: $icon-coffe; 
+  }
+}
+.icon-custom {
+  &:before {
+    content: $icon-custom; 
+  }
+}
+.icon-dev {
+  &:before {
+    content: $icon-dev; 
+  }
+}
+.icon-heart {
+  &:before {
+    content: $icon-heart; 
+  }
+}
+.icon-left-button {
+  &:before {
+    content: $icon-left-button; 
+  }
+}
+.icon-link {
+  &:before {
+    content: $icon-link; 
+  }
+}
+.icon-lounched {
+  &:before {
+    content: $icon-lounched; 
+  }
+}
+.icon-lupa {
+  &:before {
+    content: $icon-lupa; 
+  }
+}
+.icon-marketing {
+  &:before {
+    content: $icon-marketing; 
+  }
+}
+.icon-pen {
+  &:before {
+    content: $icon-pen; 
+  }
+}
+.icon-play {
+  &:before {
+    content: $icon-play; 
+  }
+}
+.icon-right-button {
+  &:before {
+    content: $icon-right-button; 
+  }
+}
+.icon-search {
+  &:before {
+    content: $icon-search; 
+  }
+}
+.icon-slider-left {
+  &:before {
+    content: $icon-slider-left; 
+  }
+}
+.icon-slider-right {
+  &:before {
+    content: $icon-slider-right; 
+  }
+}
+
+
