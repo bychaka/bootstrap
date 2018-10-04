@@ -1,4 +1,90 @@
 @import'./node_modules/reset-css/sass/reset';
 @import'~bootstrap/scss/bootstrap.scss';
 @import'./fonts.scss';
+@import'./mobile.scss';
 $main-font-family: 'Open Sans';
+$color-hover-text: #c7b299;
+
+.head {
+    margin-bottom: 50px;
+    margin-bottom: 275px;
+}
+
+header {
+    height: 1024px;
+    background-color: #cecece;
+    background-image: url(/src/styles/images/header-bg.jpg);
+    background-size: cover;
+    color: #fff;
+    .nav {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding: 0.5rem 0;
+    }
+    .nav-link {
+        color: inherit;
+        text-transform: capitalize;
+        padding: 0;
+    }
+    .nav-link:hover {
+        color: $color-hover-text;
+    }
+    .cart-search {
+        justify-content: flex-end;
+        .nav-link {
+            padding: 0.5rem;
+        }
+    }
+}
+
+.logo-text {
+    align-self: flex-end;
+    font-size: 34px;
+}
+
+.carousel-item-content {
+    color: #fff;
+    height: 275px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-indicators {
+    bottom: -335px;
+}
+
+.carousel-indicators li {
+    border-radius: 50%;
+    background-color: #979594;
+    opacity: 0.502;
+    width: 11px;
+    height: 11px;
+}
+
+.carousel-indicators .active {
+    border: 2px solid #d3c1ad;
+    background-color: unset;
+}
+
+.carousel-control-prev-icon,  .carousel-control-next-icon{
+    background-image: none;
+}
+
+.icon-slider-left, .icon-slider-right {
+    font-size: 73px;
+    font-weight: bold;
+}
+
+.btn-start {
+    line-height: 53px;
+    height: 53px;
+    border-radius: 3px;
+    background-color: #998675;
+    background: linear-gradient(to bottom, #998675 0%,#998675 97%, #736357 97%,#736357 100%); 
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #fff;
+}
+  

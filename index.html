@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Single Page Website Template PSD - cssauthor.com</title>
+    <title>bootstrap</title>
     <script src="bundle.js"></script>
 </head>
 <body>
 
     <header class="header">
-        <div class="container">
+        <div class="head container">
             <div class="row">
-                <div class="row col-md-4">
-                    <img src="#" alt="logo">
-                    <p>Waxcom</p>
+                <div class="logo-wrap row col-md-4">
+                    <img src="/src/styles/images/logo.svg" alt="logo">
+                    <p class="logo-text">Waxcom</p>
                 </div>
-                <div class="col-md-8">
-                    <ul class="nav">
+                <div class="col-md-7">
+                    <ul class="nav row">
                         <li class="nav-item"><a href="javascript:void(0);" class="nav-link">home</a></li>
                         <li class="nav-item"><a href="javascript:void(0);" class="nav-link">about us</a></li>
                         <li class="nav-item"><a href="javascript:void(0);" class="nav-link">portfolio</a></li>
@@ -26,14 +26,70 @@
                         <li class="nav-item"><a href="javascript:void(0);" class="nav-link">pricing</a></li>
                         <li class="nav-item"><a href="javascript:void(0);" class="nav-link">shortcodes</a></li>
                         <li class="nav-item"><a href="javascript:void(0);" class="nav-link">contact</a></li>
-                        <li class="nav-item row">
-                            <a href="javascript:void(0);" class="nav-link"><img src="#" alt="1"></a>
-                            <a href="javascript:void(0);" class="nav-link"><img src="#" alt="1"></a>
-                        </li>  
                     </ul>
+                </div>
+                <div class="col-md-1">
+                    <div class="cart-search row">
+                        <a href="javascript:void(0);" class="nav-link"><i class="icon-cart"></i></a>
+                        <a href="javascript:void(0);" class="nav-link"><i class="icon-search"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <div class="container carousel-item-content">
+                        <h5>1</h5>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <a class="btn btn-start" href="javascript:void(0);" role="button">get started</a>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                    <div class="container carousel-item-content">
+                          <h5>2</h5>
+                          <p>Lorem ipsum dolor sit amet.</p>
+                          <a class="btn btn-start" href="javascript:void(0);" role="button">get started</a>
+                    </div>
+              </div>
+              <div class="carousel-item">
+                    <div class="container carousel-item-content">
+                          <h5>3</h5>
+                          <p>Lorem ipsum dolor sit amet.</p>
+                          <a class="btn btn-start" href="javascript:void(0);" role="button">get started</a>
+                    </div>
+              </div>
+              <div class="carousel-item">
+                    <div class="container carousel-item-content">
+                          <h5>4</h5>
+                          <p>Lorem ipsum dolor sit amet.</p>
+                          <a class="btn btn-start" href="javascript:void(0);" role="button">get started</a>
+                    </div>
+              </div>
+              <div class="carousel-item">
+                    <div class="container carousel-item-content">
+                          <h5>5</h5>
+                          <p>Lorem ipsum dolor sit amet.</p>
+                          <a class="btn btn-start" href="javascript:void(0);" role="button">get started</a>
+                    </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <i class="carousel-control-prev-icon icon-slider-left" aria-hidden="true"></i>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <i class="carousel-control-next-icon icon-slider-right" aria-hidden="true"></i>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
     </header>
 </body>
 </html>
