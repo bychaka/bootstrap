@@ -8,6 +8,7 @@ $color-hover-text: #c7b299;
 .head {
     margin-bottom: 50px;
     margin-bottom: 275px;
+    padding-top: 30px;
 }
 
 header {
@@ -15,11 +16,24 @@ header {
     background-color: #cecece;
     background-image: url(/src/styles/images/header-bg.jpg);
     background-size: cover;
-    color: #fff;
-    .nav {
-        flex-wrap: nowrap;
+    .navbar {
         justify-content: space-between;
+        // flex-wrap: nowrap;
+        // justify-content: space-between;
         padding: 0.5rem 0;
+        height: 100%;
+        align-items: center;
+        color: #fff;
+        .navbar-brand, .navbar-collapse{
+            color: inherit;
+        }
+        .navbar-brand{
+            font-size: 34px;
+            align-self: center;
+        }
+        .collapse {
+            justify-content: flex-end;
+        }
     }
     .nav-link {
         color: inherit;
@@ -28,18 +42,35 @@ header {
     }
     .nav-link:hover {
         color: $color-hover-text;
-    }
-    .cart-search {
-        justify-content: flex-end;
-        .nav-link {
-            padding: 0.5rem;
-        }
+    
+    // .btn-bar {
+    //     display: flex;
+    //     flex-direction: row;
+        
+    //     .cart-search {
+    //         justify-content: flex-end;
+    //         .nav-link {
+    //             padding: 0.5rem;
+    //         }
+    //     }
     }
 }
 
+.btn-bar {
+    display: flex;
+    .nav-link:first-child {
+        margin-right: 10px;
+    }
+}
+
+.logo-wrap {
+    display: flex;
+    align-items: flex-end;
+}
+
 .logo-text {
-    align-self: flex-end;
     font-size: 34px;
+    margin: 0;
 }
 
 .carousel-item-content {
@@ -78,11 +109,13 @@ header {
 }
 
 .btn-start {
-    line-height: 53px;
+    display: flex;
+    align-items: center;
     height: 53px;
     border-radius: 3px;
     background-color: #998675;
-    background: linear-gradient(to bottom, #998675 0%,#998675 97%, #736357 97%,#736357 100%); 
+    //background: linear-gradient(to bottom, #998675 0%,#998675 97%, #736357 97%,#736357 100%); 
+    border-bottom: 3px solid #736357;
     cursor: pointer;
     text-transform: uppercase;
     color: #fff;
