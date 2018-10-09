@@ -113,7 +113,17 @@ header {
 }
 
 .services-item {
+    color: #555;
     position: relative;
+    &:hover {
+        color: #c7b299;
+        .services-item-title{
+            color: inherit;
+        }
+        &::after{
+            background-color: #c7b299;
+        }
+    }
 }
 
 .services-item::after{
@@ -143,4 +153,24 @@ header {
     color: #8c8c8c;
     font-size: 12px;
     line-height: 24px;
+}
+
+
+/*----------  ideas  ----------*/
+
+.ideas {
+    background-color: #fbfaf8;
+    .row {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.ideas-text {}
+
+
+/*----------  theme-box  ----------*/
+
+.theme-box {
+    background-image: linear-gradient( 0deg, rgb(33,27,25) 0%, rgb(78,52,39) 100%);   
 }
