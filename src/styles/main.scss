@@ -6,6 +6,7 @@ $main-font-family: 'Open Sans';
 $color-hover-text: #c7b299;
 
 .section-title{
+    text-transform: capitalize;
     text-align: center;
     font-size: 30px;
     color: #555;
@@ -458,11 +459,33 @@ header {
 
 /*----------  posts  ----------*/
 
-.posts-content{
-    
+.posts{
+    padding: 80px 0 72px 0;
 }
 
+.post-item{
+    &:hover{
+    }
+    .card-body{
+        &::before{
+            display: none;
+        }
+    }
+}
 
+.post-item-button-wrap{
+    display: flex;
+    justify-content: center;
+    .btn{
+        font-size: 22px;
+        padding: 0;
+        margin: 0 4px;
+        color: #d1d1d1;
+        &:hover{
+            color: #c7b299;
+        }
+    }
+}
 
 
 
