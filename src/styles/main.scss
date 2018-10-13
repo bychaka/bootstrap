@@ -203,9 +203,6 @@ header {
     }
 }
 
-.ideas-text {}
-
-
 /*----------  theme-box  ----------*/
 
 .theme-box {
@@ -557,6 +554,157 @@ header {
 }
 
 
+/*----------  footer  ----------*/
+
+.footer{
+    background-color: #191919;
+    padding: 75px 0;
+}
+
+.footer-item{
+    color: #555;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.logo-about-wrap{
+    @extend .navbar-brand;
+    font-size: 34px;
+    color: #fff;
+    margin-bottom: 23px;
+    text-transform: capitalize;
+}
+
+.footer-item-text{
+    margin-bottom: 33px;
+}
+
+.footer-more-link{
+    color: #d1d1d1;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-size: 14px;
+    text-decoration: none;
+    &:hover{
+        color: #c7b299;
+        text-decoration: none;
+        &::after{
+            border-left-color: #c7b299;
+        }
+    }
+    &::after{
+        content: '';
+        display: inline-block;
+        margin-left: 22px;
+        width: 0;
+        height: 0;
+        top: -10px;
+        left: 20px;
+        border-left: 5px solid #d1d1d1;
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+    }
+}
+
+.footer-item-title{
+    color: #fff;
+    font-size: 24px;
+    text-transform: capitalize;
+    padding: 25px 0 7px 0;
+}
+
+.footer-item-post{
+    padding: 20px 0;
+    border-bottom: 1px solid #252525;
+    &:last-child{
+        border: none;
+    }
+    &:hover{
+        .footer-date-post{
+            color: #fff;
+        }
+        .footer-text-post{
+            color: #c7b299;
+        }
+    }
+}
+
+.footer-date-post{
+    color: #363636;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.footer-text-post{
+    margin: 0;
+}
+
+.twitter-hash{
+    color: #00bff3;
+}
+
+.footer-link{
+    color: #959595;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover{
+        color: #959595;
+    }
+}
+
+.dribbble-widget{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+
+.dribbble-image{
+    width: 120px;
+    margin: 0 10px 10px 0;
+    &:nth-child(2n){
+        margin-right: 0;
+    }
+}
+
+
+/*----------  copyright  ----------*/
+
+
+.copyright-section{
+    background-color: #111;
+    padding: 45px 0;
+    color: #555;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.copyright-content{
+    justify-content: space-between;
+}
+
+.copy-nav{
+    display: flex;
+    flex-direction: row;
+}
+
+.copy-link{
+    color: inherit;
+    &:hover{
+        color: #c7b299;
+        text-decoration: none;
+    }
+}
+
+.copy-nav-margin{
+    margin-right: 13px;
+    &::after{
+        content: '|';
+        color: #252525;
+        font-style: 13px;
+        margin-left: 12px;
+    }
+}
 
 
 
@@ -566,9 +714,6 @@ header {
 
 
 
-
-/*----------  excellent  ----------*/
-/*----------  excellent  ----------*/
 /*----------  excellent  ----------*/
 /*----------  excellent  ----------*/
 /*----------  excellent  ----------*/
