@@ -2,13 +2,47 @@
 @import'~bootstrap/scss/bootstrap.scss';
 @import'./fonts.scss';
 @import'./mobile.scss';
-$main-font-family: 'Open Sans';
 $color-hover-text: #c7b299;
 
+@mixin title-medium($size) {
+    font-family: 'Raleway';
+    font-size: $size;
+    font-weight: 500;
+}
+
+@mixin title-extra($size) {
+    font-family: 'Raleway';
+    font-size: $size;
+    font-weight: 800;
+}
+
+@mixin title-semibold($size) {
+    font-family: 'Raleway';
+    font-size: $size;
+    font-weight: 600;
+}
+
+@mixin waxcom-logo-font($size) {
+    font-size: $size;
+    font-family: 'Raleway';
+    font-weight: normal;
+}
+
+@mixin montserrat($size: 14px, $weight: normal){
+    font-family: 'Montserrat';
+    font-size: $size;
+    font-weight: $weight;
+}
+
+.default-option{
+    @include montserrat(14px, 300);
+    color: #8c8c8c;
+}
+
 .section-title{
+    @include title-semibold(30px);
     text-transform: capitalize;
     text-align: center;
-    font-size: 30px;
     color: #555;
     margin-bottom: 30px;
 }
@@ -36,6 +70,56 @@ $color-hover-text: #c7b299;
     margin-bottom: 30px;
 }
 
+
+.btn-start {
+    @include title-extra(14px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 53px;
+    padding: 0 35px;
+    background-color: #998675;
+    box-shadow: 0 3px #736357;
+    border-radius: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #fff;
+    outline: none;
+    box-sizing: border-box;
+    &:hover, &:active, &focus{
+        color:#fff;
+        border-color: #998675;
+    }
+}
+
+
+.more-link{
+    color: $color-hover-text;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-size: 14px;
+    text-decoration: none;
+    &:hover{
+        color: $color-hover-text;
+        text-decoration: none;
+        &::after{
+            border-left-color: $color-hover-text;
+        }
+    }
+    &::after{
+        content: '';
+        display: inline-block;
+        margin-left: 22px;
+        width: 0;
+        height: 0;
+        top: -10px;
+        left: 20px;
+        border-left: 5px solid $color-hover-text;
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+    }
+}
+
 /*----------  header  ----------*/
 
 header {
@@ -59,7 +143,7 @@ header {
     align-items: center;
     color: #fff;
     .navbar-brand{
-        font-size: 34px;
+        @include waxcom-logo-font(34px);
         align-self: center;
         color: inherit;
     }
@@ -94,6 +178,21 @@ header {
     align-items: center;
 }
 
+.carousel-item-subtitle{
+    @include title-medium(36px);
+}
+
+.carousel-item-title{
+    @include title-extra(52px);
+}
+
+.carousel-item-text{
+    font-size: 16px;
+    line-height: 24px;
+    height: auto;
+    flex: 0 0 30%;
+}
+
 .carousel-indicators {
     bottom: -335px;
     .header-slider-indicator {
@@ -113,35 +212,29 @@ header {
     background-image: none;
 }
 
+.carousel-control-prev, .carousel-control-next{
+    .icon-slider-left, .icon-slider-right {
+        color: #a3a2a0;
+    }
+    &:hover{
+        .icon-slider-left, .icon-slider-right {
+            color: #d3c1ad;
+        }
+    }
+}
+
 .icon-slider-left, .icon-slider-right {
+    color: #a3a2a0;
     font-size: 73px;
     font-weight: bold;
+    &:hover{
+        color: #d3c1ad;
+    }
 }
 
 .icon-slider-right {
     margin-right: 35px;
-}
-
-.btn-start {
-    display: block;
-    text-align: center;
-    line-height: 40px;
-    height: 53px;
-    background-color: #998675;
-    //background: linear-gradient(to bottom, #998675 0%,#998675 97%, #736357 97%,#736357 100%); 
-    box-shadow: 0 3px #736357;
-    border-radius: 3px;
-    cursor: pointer;
-    text-transform: uppercase;
-    color: #fff;
-    outline: none;
-    box-sizing: border-box;
-    &:hover, &:active, &focus{
-        color:inherit;
-        border-color: #998675;
-    }
-}
- 
+} 
 
 /*----------  services  ----------*/
 
@@ -151,15 +244,16 @@ header {
 }
 
 .services-item {
+    @include title-semibold(22px);
     color: #555;
     position: relative;
     &:hover {
-        color: #c7b299;
+        color: $color-hover-text;
         .services-item-title{
             color: inherit;
         }
         &::after{
-            background-color: #c7b299;
+            background-color: $color-hover-text;
         }
     }
     &::after{
@@ -187,8 +281,8 @@ header {
 }
 
 .services-item-text {
+    @extend .default-option;
     color: #8c8c8c;
-    font-size: 12px;
     line-height: 24px;
 }
 
@@ -203,6 +297,18 @@ header {
     }
 }
 
+.ideas-title {
+    @include title-semibold(30px);
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.ideas-text {
+    margin-bottom: 40px;
+    font-size: 16px;
+    line-height: 28px;
+}
+
 /*----------  theme-box  ----------*/
 
 .theme-box {
@@ -214,8 +320,18 @@ header {
     align-items: center;
 }
 
+.theme-title{
+    @include waxcom-logo-font(28px);
+    color: #fff;
+}
+
+.theme-description {
+    color: #615855;
+    font-size: 18px;
+}
+
 .alter-text-color{
-    color: #c7b299;
+    color: $color-hover-text;
 }
 
 /*----------  latest projects  ----------*/
@@ -235,10 +351,6 @@ header {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    .section-title {
-        color: #ccc;
-        text-transform: capitalize;
-    }
 }
 
 .btn-categories{
@@ -259,6 +371,10 @@ header {
         border-color: #998675;
         text-decoration: none;
     }
+}
+
+.card-title{
+    @include title-medium(20px);
 }
 
 .card{
@@ -282,7 +398,7 @@ header {
             border-bottom: 10px solid #fbfaf8;
         }
         .card-title{
-            color: #c7b299;
+            color: $color-hover-text;
         }
         .card-text{
             color: #d1d1d1;
@@ -302,7 +418,7 @@ header {
                 color: #fff;
             }
             .card-text{
-                color: #c7b299;
+                color: $color-hover-text;
             }
         }
     }
@@ -321,6 +437,7 @@ header {
     transition: all 0.4s ease-in-out;
     padding-top: 105px;
     .card-mask-link{
+        font-size: 25px;
         display: block;
         color: #fff;
         text-decoration: none;
@@ -329,7 +446,7 @@ header {
             margin-right: 30px;
         }
         &:hover{
-            color: #c7b299;
+            color: $color-hover-text;
         }
     }
     .icon-link, .icon-lupa{
@@ -353,11 +470,19 @@ header {
     background-image: url(/src/styles/images/video-bg.jpg);
     background-size: cover;
     color: #fff;
+    .section-title{
+        @include title-medium(30px);
+        color: #fff;
+        margin-bottom: 10px;
+    }
     .section-description {
+        @include montserrat(14px, 300);
+        line-height: 28px;
         color: inherit;
     }
     .timer{
-        color: #c7b299;
+        @include montserrat;
+        color: $color-hover-text;
     }
 }
 
@@ -381,6 +506,8 @@ header {
 }
 
 .excellent-content-wrap{
+    font-size: 16px;
+    line-height: 28px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -394,7 +521,7 @@ header {
 }
 
 .excellent-list{
-    padding-left: 45px;
+    padding-left: 35px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -402,7 +529,7 @@ header {
 
 .excellent-list-item{
     background: url(/src/styles/images/icon-dot-item.svg) no-repeat 0 6px;
-    padding-left: 54px;
+    padding-left: 44px;
     line-height: 32px;
 }
 
@@ -419,7 +546,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #c7b299;
+    color: $color-hover-text;
 }
 
 .counters-item-icon{
@@ -427,7 +554,7 @@ header {
 }
 
 .count{
-    font-size: 48px;
+    @include montserrat(48px, 200);
     color: #fff;
     margin-bottom: 10px;
 }
@@ -466,8 +593,30 @@ header {
         .post-item-button-wrap{
             opacity: 1;
         }
+        .post-date-day{
+            background-color: $color-hover-text;
+        }
+        .post-date-month{
+            background-color: #a48d72;
+        }
+        .card-body {
+            
+        .card-title{
+            color: $color-hover-text;
+        }
+        .card-text{
+            color: #fff;
+        }
+        }
     }
     .card-body{
+        .card-title {
+            color: #555;
+        }
+        .card-text{
+            color: #8c8c8c;
+            margin-bottom: 22px;
+        }
         &::before{
             display: none;
         }
@@ -509,12 +658,12 @@ header {
 }
 
 .post-date-month{
+    font-family: 'Roboto';
     border-radius: 0 0 3px 3px;
     background-color: #252525;
     padding: 7px 14px;
     font-size: 12px;
 }
-
 
 .post-item-button-wrap{
     opacity: 0;
@@ -526,7 +675,7 @@ header {
         margin: 0 4px;
         color: #d1d1d1;
         &:hover{
-            color: #c7b299;
+            color: $color-hover-text;
         }
     }
 }
@@ -559,6 +708,18 @@ header {
 .footer{
     background-color: #191919;
     padding: 75px 0;
+    .more-link {
+        color: #d1d1d1;
+        &::after{
+            border-left: 5px solid #d1d1d1;
+        }
+        &::hover{
+            color: $color-hover-text;
+            &::after{
+                border-left-color: $color-hover-text;
+            }
+        }
+    }
 }
 
 .footer-item{
@@ -569,44 +730,20 @@ header {
 
 .logo-about-wrap{
     @extend .navbar-brand;
-    font-size: 34px;
+    @include waxcom-logo-font(34px);
     color: #fff;
     margin-bottom: 23px;
     text-transform: capitalize;
 }
 
 .footer-item-text{
+
     margin-bottom: 33px;
 }
 
-.footer-more-link{
-    color: #d1d1d1;
-    cursor: pointer;
-    text-transform: capitalize;
-    font-size: 14px;
-    text-decoration: none;
-    &:hover{
-        color: #c7b299;
-        text-decoration: none;
-        &::after{
-            border-left-color: #c7b299;
-        }
-    }
-    &::after{
-        content: '';
-        display: inline-block;
-        margin-left: 22px;
-        width: 0;
-        height: 0;
-        top: -10px;
-        left: 20px;
-        border-left: 5px solid #d1d1d1;
-        border-top: 4px solid transparent;
-        border-bottom: 4px solid transparent;
-    }
-}
-
 .footer-item-title{
+    font-family: 'Raleway';
+    font-weight: bold;
     color: #fff;
     font-size: 24px;
     text-transform: capitalize;
@@ -624,7 +761,7 @@ header {
             color: #fff;
         }
         .footer-text-post{
-            color: #c7b299;
+            color: $color-hover-text;
         }
     }
 }
@@ -691,7 +828,7 @@ header {
 .copy-link{
     color: inherit;
     &:hover{
-        color: #c7b299;
+        color: $color-hover-text;
         text-decoration: none;
     }
 }
@@ -701,31 +838,8 @@ header {
     &::after{
         content: '|';
         color: #252525;
-        font-style: 13px;
+        font-size: 13px;
         margin-left: 12px;
     }
 }
 
-
-
-
-
-
-
-
-
-/*----------  excellent  ----------*/
-/*----------  excellent  ----------*/
-/*----------  excellent  ----------*/
-/*----------  excellent  ----------*/
-/*----------  excellent  ----------*/
-/*----------  excellent  ----------*/
-/*----------  excellent  ----------*/
-/*----------  excellent  ----------*/
-/*----------  excellent  ----------*/
-/*----------  excellent  ----------*/
-/*----------  excellent  ----------*/
-/*----------  excellent  ----------*/
-/*----------  excellent  ----------*/
-/*----------  excellent  ----------*/
-/*----------  excellent  ----------*/
