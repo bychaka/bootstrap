@@ -2,6 +2,7 @@
 @import'~bootstrap/scss/bootstrap.scss';
 @import'./fonts.scss';
 @import'./mobile.scss';
+
 $color-hover-text: #c7b299;
 
 @mixin title-medium($size) {
@@ -307,6 +308,14 @@ header {
     margin-bottom: 40px;
     font-size: 16px;
     line-height: 28px;
+}
+
+.ideas-image{
+    height: 400px;
+    width: 100%;
+    background: url(/src/styles/images/browser-center.png) no-repeat;
+    background-size: contain;
+    background-position-y: bottom;
 }
 
 /*----------  theme-box  ----------*/
@@ -694,6 +703,7 @@ header {
     height: 100%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .partners-item{
@@ -843,3 +853,6 @@ header {
     }
 }
 
+
+@import'./tablet.scss';
+@import'./mobile.scss';
