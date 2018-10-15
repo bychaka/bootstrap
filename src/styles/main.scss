@@ -2,6 +2,7 @@
 @import'~bootstrap/scss/bootstrap.scss';
 @import'./fonts.scss';
 @import'./mobile.scss';
+@import'./mobile_and_tablet.scss';
 
 $color-hover-text: #c7b299;
 
@@ -185,6 +186,7 @@ header {
 
 .carousel-item-title{
     @include title-extra(52px);
+    text-align: center;
 }
 
 .carousel-item-text{
@@ -291,6 +293,7 @@ header {
 /*----------  ideas  ----------*/
 
 .ideas {
+    padding-top: 75px;
     background-color: #fbfaf8;
     .row {
         justify-content: center;

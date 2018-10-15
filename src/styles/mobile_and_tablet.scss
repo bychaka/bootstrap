@@ -1,0 +1,113 @@
+@media only screen and (max-width: 1099px){
+
+    .navbar{
+        position: relative;
+    }
+
+    .navbar-brand{
+        padding-left: 15px;
+    }
+
+    .navbar-collapse{
+        margin: 0;
+        position: absolute;
+        width: 100vw;
+        padding: 30px;
+        margin-top: 114px;
+        display: block;
+        background: rgba($color: #000000, $alpha: 0.8);
+        z-index: 999;
+    }
+
+
+    .navbar-nav{
+        align-items: center;
+        .nav-item{
+            margin-bottom: 15px;
+        }
+    }
+
+    .navbar-toggler{
+        position: relative;
+        padding: 10px;
+        background: transparent;
+        border: 1px solid transparent;
+        margin: 7px 0;
+        margin-right: 15px;
+        z-index: 9999;
+        &:active, &:focus{
+            outline-color: #fff;
+        }
+        .navbar-toggler-icon{
+            color: #fff;
+        }
+    }
+
+    //toogler button    
+    .navbar-toggler [class*='bar-'] {
+        background: #fff;
+        display: block;
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+        -webkit-transition: .2s ease all;
+                transition: .2s ease all;
+        border-radius: 2px;
+        height: 2px;
+        width: 25px;
+        margin-bottom: 4px;
+        
+    }
+    
+    .navbar-toggler .bar-bot {
+        margin-bottom: 0;
+    }
+    
+    .opened .bar-top {
+        -webkit-transform: rotate(45deg) translate(2px, -2px);
+                transform: rotate(45deg) translate(2px, -2px);
+        -webkit-transform-origin: 15% 15%;
+                transform-origin: 15% 15%;
+    }
+    .opened .bar-mid {
+        opacity: 0;
+    }
+
+    .opened .bar-bot {
+        -webkit-transform: rotate(-45deg) translate(-2px, 2px);
+                transform: rotate(-45deg) translate(2px, 2px);
+        -webkit-transform-origin: 15% 95%;
+                transform-origin: 15% 95%;
+    }
+
+
+    .btn-bar{
+        .nav-link{
+            margin-left: 20px;
+        }
+    }
+
+    .carousel-control-next{
+        justify-content: flex-end;
+        padding-right: 15px;
+        .icon-slider-right {
+            margin-right: 25px;
+        } 
+    }
+
+    .carousel-control-prev{
+        justify-content: flex-start;
+        padding-left: 15px;
+    }
+
+    .icon-slider-left, .icon-slider-right{
+        font-size: 36px;
+    }
+
+    .carousel-item{
+        padding: 0 30px;
+    }
+
+    .carousel-indicators{
+        bottom: -120px;
+    }
+}
