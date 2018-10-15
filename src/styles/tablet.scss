@@ -19,6 +19,7 @@
 
     .ideas-image{
         height: 350px;
+        background-size: contain;
     }
 
     .theme-box-content{
@@ -31,6 +32,9 @@
         margin-bottom: 40px;
     }
 
+    .card-title{
+        font-size: 18px;
+    }
     
     .video-presentation{
         min-height: 550px;

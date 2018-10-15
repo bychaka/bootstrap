@@ -162,3 +162,18 @@
     }
 }
 
+@media only screen and (min-width: 1200px){
+    .navbar{
+        width: 1110px;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+}
+
+
+@media only screen and (min-width: 992px){
+    .ideas-image{
+        height: 400px !important;
+        background-size: cover !important;
+    }
+}
