@@ -1,11 +1,11 @@
 @media only screen and (max-width: 575px) {
     .head {
         padding: 30px 0 0 0;
-        margin-bottom: 150px;
+        margin-bottom: 100px;
     }
 
     .header{
-        height: 780px;
+        height: 680px;
     }
 
 
@@ -15,11 +15,6 @@
 
     .carousel-item-title{
         font-size: 36px;
-    }
-
-
-    .services-item{
-        margin-bottom: 70px;
     }
 
     .ideas-image{
@@ -39,20 +34,6 @@
         margin-bottom: 40px;
     }
 
-    .latest-projects-content{
-        .btn{
-            width: unset;
-        }
-    }
-
-    .catigories-menu{
-        display: flex;
-        flex-wrap: wrap;
-        .btn-categories{
-            margin-bottom: 10px;
-        }
-    }
-
     .wrap-projects-item{
         padding: 0 15px;
     }
@@ -60,23 +41,7 @@
     .video-presentation{
         min-height: 450px;
     }
-
-    .desktop-block{
-        display: none;
-    }
-
-    .excellent-content-wrap{
-        padding: 70px 0 50px 0;
-    }
-
-    .counters{
-        padding-bottom: 30px;
-    }
-
-    .counters-item{
-        margin-bottom: 70px;
-    }
-
+    
     .posts{
         .carousel-item{
             .posts-carousel-image{

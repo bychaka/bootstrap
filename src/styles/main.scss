@@ -140,7 +140,7 @@ header {
 .navbar {
     display: flex;
     justify-content: space-between;
-    padding: 0.5rem 0;
+    padding: 0.5rem 15px;
     height: 100%;
     align-items: center;
     color: #fff;
@@ -836,6 +836,10 @@ header {
 .copy-nav{
     display: flex;
     flex-direction: row;
+}
+
+.copy-nav-left{
+    margin-right: 90px;
 }
 
 .copy-link{

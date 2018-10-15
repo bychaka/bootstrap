@@ -1,8 +1,84 @@
 
 @media screen and (min-width: 576px) and (max-width: 1099px){
+    .head {
+        padding: 30px 0 0 0;
+        margin-bottom: 200px;
+    }
+    
+    .header{
+        height: 780px;
+    }
+
+    .carousel-item-subtitle{
+        font-size: 28px;
+    }
+
+    .carousel-item-title{
+        font-size: 42px;
+    }
+
+    .ideas-image{
+        height: 350px;
+    }
+
+    .theme-box-content{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .theme-description{
+        margin-bottom: 40px;
+    }
+
+    
+    .video-presentation{
+        min-height: 550px;
+    }
+
+    .counters-item-title{
+        text-align: center;
+    }
+    
+    .partners{
+        display: flex;
+        align-items: center;
+        height: 330px;
+    }
+
     .partners-logo{
         width: 100%;
     }
+
+    
+    .footer-item{
+        margin-bottom: 20px;
+    }
+
+    .widget{
+        text-align: center;
+    }
+
+    .dribbble-widget{
+        justify-content: center;
+    }
+
+    .dribbble-image{
+        &:nth-child(2){
+            margin-right: 10px;
+        }
+    }
+    
+    .copyright-section{
+        .copyright-content{
+
+            justify-content: center;
+            .copy-nav{
+                margin-bottom: 15px;
+            }
+        }
+    }
+
 }
 
 // latesrt project on sm, 

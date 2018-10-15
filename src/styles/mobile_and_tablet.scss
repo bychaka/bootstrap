@@ -1,7 +1,11 @@
-@media only screen and (max-width: 1099px){
+@media only screen and (max-width: 991px){
 
-    .navbar{
-        position: relative;
+    .head{
+        .navbar{
+            position: relative;
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
 
     .navbar-brand{
@@ -15,7 +19,7 @@
         padding: 30px;
         margin-top: 114px;
         display: block;
-        background: rgba($color: #000000, $alpha: 0.8);
+        background: rgba($color: #000000, $alpha: 0.85);
         z-index: 999;
     }
 
@@ -86,28 +90,75 @@
         }
     }
 
-    .carousel-control-next{
-        justify-content: flex-end;
-        padding-right: 15px;
-        .icon-slider-right {
-            margin-right: 25px;
-        } 
+    .header{
+
+        .carousel-control-next{
+            justify-content: flex-end;
+            padding-right: 15px;
+            .icon-slider-right {
+                margin-right: 25px;
+            } 
+        }
+    
+        .carousel-control-prev{
+            justify-content: flex-start;
+            padding-left: 15px;
+        }
+    
+        .icon-slider-left, .icon-slider-right{
+            font-size: 36px;
+        }
+    
+        .carousel-item{
+            padding: 0 30px;
+        }
+    
+        .carousel-indicators{
+            bottom: -120px;
+        }
     }
 
-    .carousel-control-prev{
-        justify-content: flex-start;
-        padding-left: 15px;
+    .services-item{
+        margin-bottom: 70px;
     }
 
-    .icon-slider-left, .icon-slider-right{
-        font-size: 36px;
+    
+    .latest-projects-content{
+        .btn{
+            width: unset;
+        }
     }
 
-    .carousel-item{
-        padding: 0 30px;
+    .catigories-menu{
+        display: flex;
+        flex-wrap: wrap;
+        .btn-categories{
+            margin-bottom: 10px;
+        }
+    }
+    
+    .excellent{
+        .excellent-content-wrap{
+            padding: 70px 0 50px 0;
+        }
     }
 
-    .carousel-indicators{
-        bottom: -120px;
+    .counters{
+        padding-bottom: 30px;
+    }
+
+    .counters-item{
+        margin-bottom: 70px;
+    }
+
+}
+
+@media only screen and (max-width: 1200px){
+    .excellent{
+
+        .desktop-block{
+            display: none;
+        }
     }
 }
+
